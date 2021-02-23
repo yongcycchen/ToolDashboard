@@ -1,12 +1,26 @@
+using System.Linq;
+using System.Threading.Tasks;
+using API.Data;
+using API.Entities;
 using API.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        public string GetUser()
+        private readonly DataContext _context;
+        public UserRepository(DataContext context)
         {
-            var user = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            _context = context;
+        }
+
+        public async Task<FSUser> GetUserByFSIdAsync(string FSId)
+        {
+            // var user = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            var user = await _context.Users
+                .Where(x =>x.UserName == FSId)
+                .SingleOrDefaultAsync();
             return user;
         }
     }

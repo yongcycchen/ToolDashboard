@@ -5,7 +5,6 @@ namespace API.Entities
 {
     public class FSUser : IdentityUser<int> 
     {
-        public string FSID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public ICollection<UserTool> NotificationList { get; set; }

@@ -1,7 +1,10 @@
+using System.Threading.Tasks;
+using API.Entities;
+
 namespace API.Interfaces
 {
     public interface IUserRepository
     {
-        public string GetUser();
+        public Task<FSUser> GetUserByFSIdAsync(string FSId);
     }
 }
