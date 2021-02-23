@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\tooldashboard\\API\\API.csproj": {}
+    "c:\\tooldashboard\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\tooldashboard\\API\\API.csproj": {
+    "c:\\tooldashboard\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\tooldashboard\\API\\API.csproj",
+        "projectUniqueName": "c:\\tooldashboard\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\tooldashboard\\API\\API.csproj",
+        "projectPath": "c:\\tooldashboard\\API\\API.csproj",
         "packagesPath": "C:\\Users\\FS119320\\.nuget\\packages\\",
-        "outputPath": "C:\\tooldashboard\\API\\obj\\",
+        "outputPath": "c:\\tooldashboard\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -45,7 +45,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.0.1, )",
+              "version": "[5.0.3, )",
               "noWarn": [
                 "NU1605"
               ]
@@ -56,6 +56,32 @@
               "noWarn": [
                 "NU1605"
               ]
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

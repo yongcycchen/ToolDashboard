@@ -6,9 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class UserController: ControllerBase
+    public class UserController: BaseApiController
     {
         
         [HttpGet]
