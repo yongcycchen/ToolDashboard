@@ -1,4 +1,5 @@
 using API.Dtos;
+using API.Entities;
 using AutoMapper;
 
 namespace API.Helpers
@@ -7,7 +8,8 @@ namespace API.Helpers
     {
         public AutoMapperProfiles()
         {
-            
+            CreateMap<RegisterDto,FSUser>();
+            CreateMap<FSUser,RegisterDto>();
         }
     }
 }

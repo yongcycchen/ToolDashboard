@@ -22,6 +22,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using API.Services;
+using AutoMapper;
+using API.Helpers;
 
 namespace API
 {
@@ -46,7 +48,8 @@ namespace API
             // services.AddIdentityServices(_config);
             
             services.AddScoped<ITokenService,TokenService>();
-
+            // services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
+            // services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             services.AddDbContext<DataContext>(options =>
             {
                 var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
@@ -128,7 +131,7 @@ namespace API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapFallbackToController("Index","Fallback");
+                // endpoints.MapFallbackToController("Index","Fallback");
             });
         }
     }
